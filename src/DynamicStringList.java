@@ -1,3 +1,3 @@
-public class MyStringArray {
+public class DynamicStringList implements StringList{
     
 }
