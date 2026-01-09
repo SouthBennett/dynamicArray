@@ -1,8 +1,14 @@
 public class DynamicStringList implements StringList{
+    private  String[] words = {"hello", "goodbye", "world", "car", "dog", "cat"};
 
     @Override
     public String get(int index) {
+        String word = words[index];
+        if(words[index] != null){
+            return word;
+        }else{
         throw new IndexOutOfBoundsException("Index out of bounds");
+        }
     }
 
     @Override
@@ -35,6 +41,7 @@ public class DynamicStringList implements StringList{
         return 0;
        
     }
+
     
 }
   
