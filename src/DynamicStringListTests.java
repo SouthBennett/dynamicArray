@@ -13,4 +13,15 @@ public class DynamicStringListTests {
 
         assertEquals("dog", result);
     }
+
+    @Test
+    public void setTest(){
+        // replaces a string at a specific index
+        DynamicStringList list = new DynamicStringList();
+
+        list.set(3, "house");
+        String result = list.get(3);
+
+        assertEquals("house", result);
+    }
 }

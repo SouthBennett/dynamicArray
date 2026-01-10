@@ -1,5 +1,18 @@
 public class DynamicStringList implements StringList{
-    private  String[] words = {"hello", "goodbye", "world", "car", "dog", "cat"};
+    
+    private String[] words = {"hello", "goodbye", "world", "car", "dog", "cat"};
+    int index;
+    String value;
+
+
+
+    public void main(int index, String value){
+    index = 3;
+    value = "house";
+    }
+    
+  
+
 
     @Override
     public String get(int index) {
@@ -13,8 +26,10 @@ public class DynamicStringList implements StringList{
 
     @Override
     public void set(int index, String value) {
-        
-        throw new IndexOutOfBoundsException("Index out of bounds");
+        words[index] = value;
+        if(index > words.length){
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
         
     }
 
