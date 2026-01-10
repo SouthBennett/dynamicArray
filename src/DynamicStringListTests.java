@@ -24,4 +24,14 @@ public class DynamicStringListTests {
 
         assertEquals("house", result);
     }
+
+    @Test
+    public void addTest() {
+        // add a string to the end of an array
+        DynamicStringList list = new DynamicStringList();
+
+        list.add("Bruhhh");
+
+        assertEquals("Bruhhh", list.get(6));
+    }
 }
