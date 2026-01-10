@@ -34,4 +34,14 @@ public class DynamicStringListTests {
 
         assertEquals("Bruhhh", list.get(6));
     }
+
+    @Test
+    public void removeTest() {
+        // remove a string at the specified index from the list.
+        DynamicStringList list = new DynamicStringList();
+
+        String removed = list.remove(0);
+
+        assertEquals("hello", removed);
+    }
 }
