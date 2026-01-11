@@ -36,13 +36,42 @@ public class DynamicStringListTests {
     }
 
     @Test
-    public void removeTest() {
-        // remove a string at the specified index from the list.
+    public void removeShiftAndShrinkTest() {
+        // remove a string at the specified index from the list, shrink the size and shift remaining elements to the left.
         DynamicStringList list = new DynamicStringList();
 
         String removed = list.remove(0);
 
         assertEquals("hello", removed);
+        assertEquals(5, list.size());
+        assertEquals("goodbye", list.get(0));
+        assertEquals("world", list.get(1));
+        assertEquals("car", list.get(2));
+        assertEquals("dog", list.get(3));
+        assertEquals("cat", list.get(4));
+    }
+
+    @Test
+    public void testSize() {
+        // return the number of strings currently in the list
+        DynamicStringList list = new DynamicStringList();
+
+        int result = list.size();
+
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testSizeAfterAdd() {
+        // return the size after a string has been added
+        DynamicStringList list = new DynamicStringList();
+
+        list.add("Duuuuuude");
+
+        int result = list.size();
+
+        assertEquals(7, result);
+
     }
 
     @Test

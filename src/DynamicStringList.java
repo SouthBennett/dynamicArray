@@ -58,29 +58,29 @@ public class DynamicStringList implements StringList{
 
     @Override
     public String remove(int index) {
-        //Variable to hold the removed word
-        String removedWord = "";
         //edge case
         if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
-        removedWord = words[index];
+        //Variable to hold the removed word
+        String removedWord = words[index];
         //loop through the array - 1
         for (int i = index; i < size - 1; i++) {
             //shift elements from right to left 
             words[i] = words[i + 1];
-            //clear the last slot of the array
-            words[size- 1] = null;
-            //shrink the array size by 1
-            size--;
         }
+        //clear the last slot of the array
+        words[size- 1] = null;
+        //shrink the array size by 1
+        size--;
         // return the string that was removed
         return removedWord;
     }
 
     @Override
+    // returns the number of strings currently in the list
     public int size() {
-        return 0;
+        return size;
     
     }
 
