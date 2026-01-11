@@ -108,4 +108,15 @@ public class DynamicStringListTests {
 
         assertEquals(12, result);
     }
+
+    @Test
+    public void testSizeRemove() {
+        // return the number of strings currently in the list
+        DynamicStringList list = new DynamicStringList();
+
+        list.remove(3);
+        int result = list.size();
+
+        assertEquals(6, result);
+    }
 }
