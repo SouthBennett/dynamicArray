@@ -63,7 +63,7 @@ public class DynamicStringListTests {
 
     @Test
     public void testSizeAfterAdd() {
-        // return the size after a string has been added
+        // return the size after a string has been added to the array
         DynamicStringList list = new DynamicStringList();
 
         list.add("Duuuuuude");
@@ -72,6 +72,18 @@ public class DynamicStringListTests {
 
         assertEquals(7, result);
 
+    }
+
+    @Test
+    public void testSizeAfterRemove() {
+        // returrn the size after removing a string from the array
+        DynamicStringList list = new DynamicStringList();
+
+        list.remove(3);
+
+        int result = list.size();
+
+        assertEquals(5, result);
     }
 
     @Test
