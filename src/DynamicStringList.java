@@ -16,6 +16,7 @@ public class DynamicStringList implements StringList{
 
 
     @Override
+    // return a string at a specific index
     public String get(int index) {
         String word = words[index];
         if(words[index] != null){
@@ -26,6 +27,7 @@ public class DynamicStringList implements StringList{
     }
 
     @Override
+    // Replaces a string at a specific index 
     public void set(int index, String value) {
         words[index] = value;
         if(index > words.length){
@@ -83,8 +85,10 @@ public class DynamicStringList implements StringList{
     }
 
     @Override
+    //returns the capacity( length of the array. Not the items in it)
     public int capacity() {
-        return 0;
+        int capacity = words.length;
+        return capacity;
        
     }
 

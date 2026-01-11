@@ -44,4 +44,27 @@ public class DynamicStringListTests {
 
         assertEquals("hello", removed);
     }
+
+    @Test
+    public void testCapacity() {
+        // Return the capacity or the length of the array
+        DynamicStringList list = new DynamicStringList();
+
+        int result = list.capacity();
+
+        assertEquals(6, result);
+    }
+
+
+    @Test
+    public void testCapacityAfterAdd (){
+        //returns capacity of array after it has been doubled
+        DynamicStringList list = new DynamicStringList();
+
+        list.add("MORE!!!");
+
+        int result = list.capacity();
+
+        assertEquals(12, result);
+    }
 }
